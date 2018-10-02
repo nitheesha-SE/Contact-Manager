@@ -1,0 +1,6 @@
+<mat-progress-bar mode="indeterminate" style="margin:10px auto;" *ngIf="!contacts"></mat-progress-bar>
+<div>
+    <input class="search-bar" type="text" [(ngModel)]="queryString" id="search" placeholder="Search to type">
+    <button class="add-contact" mat-stroked-button color="primary" style="float: right;" (click) = "addContact()" matTooltip="Add Contact"><i class="material-icons">add</i>Add Contact</button>
+</div>
+<app-contact-card *ngFor="let contact of contacts | searchContact : queryString : searchableList" [contact]="contact" (deletedContactEvent)=onDeleteContact($event) (editContactEvent)=onEditContact($event)></app-contact-card>

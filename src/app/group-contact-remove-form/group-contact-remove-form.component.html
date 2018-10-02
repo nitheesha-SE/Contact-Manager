@@ -1,0 +1,21 @@
+
+ <div class="container">
+  <h1>Remove Contacts</h1>
+  <form>
+    <ng-multiselect-dropdown
+      [placeholder]="'select the contacts to remove'"
+      [data]="dropdownList"
+      [(ngModel)]="selectedItems"
+      name="selectedcontacts"
+      [settings]="dropdownSettings"
+      (onSelect)="onItemSelect($event)"
+      (onSelectAll)="onSelectAll($event)"
+    >
+    </ng-multiselect-dropdown>
+    <div class ="buttons">
+      <button mat-button (click)="onRemoveClick()">Remove</button>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+    </div>
+  </form>
+</div>
+  

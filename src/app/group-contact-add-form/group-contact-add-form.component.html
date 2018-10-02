@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Add contacts</h1>
+  <form>
+    <ng-multiselect-dropdown
+      [placeholder]="'select contacts'"
+      [data]="dropdownList"
+      [(ngModel)]="selectedItems"
+      name="contacts"
+      [settings]="dropdownSettings"
+      (onSelect)="onItemSelect($event)"
+      >
+    </ng-multiselect-dropdown>
+    <div class="buttons">
+      <button mat-button (click)="onSaveClick()">Save</button>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+    </div>
+  </form>
+</div>

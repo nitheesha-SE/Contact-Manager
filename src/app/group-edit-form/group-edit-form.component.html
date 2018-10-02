@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h1>Enter details</h1>
+  <form class="edit-form">
+    <mat-form-field class="full-width" appearance="standard">
+        <input matInput placeholder="Name" value="name" [(ngModel)]="data.name" name="Name">
+        <mat-hint align="start">Group Name</mat-hint>
+   </mat-form-field>
+    <mat-form-field class="full-width" appearance="standard">
+      <input matInput placeholder="Description" [(ngModel)]="data.description" name="description">
+      <mat-hint align="start">Group Description</mat-hint>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="onSaveClick()">Save</button>
+      <button mat-button (click)="onCancelClick()">Cancel</button></div>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<mat-card class="group-card">
+  <div class ="scrolable">
+  <mat-card-title>{{group.name}}</mat-card-title>
+  <mat-card-subtitle>Description: {{group.description}}</mat-card-subtitle>
+  <mat-card-subtitle *ngFor="let contact of group.contacts">{{ contact.firstName }}</mat-card-subtitle>
+  </div>
+  <mat-card-actions align="end">
+    <button mat-mini-fab color="primary" (click) = "editGroup()" matTooltip="Edit Group"><i class="material-icons" align ="center">edit</i></button>
+    <button mat-mini-fab color="primary" (click) = "deleteGroup()"   matTooltip="Delete Group"><i class="material-icons">delete</i></button>
+    <button mat-mini-fab color="primary" (click) = "addContacts()"   matTooltip="Add Contacts"><i class="material-icons" align ="center">add</i></button>
+    <button mat-mini-fab color="primary" (click) = "removeContacts()"   matTooltip="Remove Contacts"><i class="material-icons">remove</i></button>
+  </mat-card-actions>
+</mat-card>

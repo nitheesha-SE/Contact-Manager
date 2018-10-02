@@ -1,0 +1,14 @@
+.group-card {
+    display: inline-block;
+    min-width: 250px;
+    margin: 12px;
+    height: 140px;
+    width: 250px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.scrolable{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}

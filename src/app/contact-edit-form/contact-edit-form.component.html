@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h1>Enter the details</h1>
+  <form class="edit-form">
+    <mat-form-field class="full-width" appearance="standard">
+      <input matInput placeholder="FirstName" value="firstName" [(ngModel)]="data.firstName" name="firstName">
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="standard">
+      <input matInput placeholder="LastName" value="lastName" [(ngModel)]="data.lastName" name="lastName">
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="standard">
+        <input matInput placeholder="Email" value="Email" [(ngModel)]="data.email" name="email">
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onSaveClick()">Save</button>
+      <button mat-button (click)="onNoClick()">Cancel</button>
+    </div>
+  </form>
+</div>

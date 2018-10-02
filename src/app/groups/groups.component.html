@@ -1,0 +1,5 @@
+<mat-progress-bar mode="indeterminate" style="margin:10px auto;" *ngIf="!groups"></mat-progress-bar>
+<div class = "button-add">
+    <button class="add-group" mat-stroked-button color="primary" style="float: right;" (click) = "addGroup()" matTooltip="Add Contact"><i class="material-icons">add</i>Add Group</button>
+</div>
+<app-group-card *ngFor="let group of groups" [group]="group" (deletedGroupEvent)=onDeleteGroup($event) (editGroupEvent)=onEditGroup($event) (addGroupContactEvent) =onAddGroupContact($event) (deleteGroupContactEvent) =onDeleteGroupContact($event)></app-group-card>
